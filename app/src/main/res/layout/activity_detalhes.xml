@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#fff9d5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/TextTitle"
+            android:layout_width="250dp"
+            android:layout_height="90dp"
+            android:src="@drawable/titulo_uma_linha"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+        <!-- Card Principal -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Nome (Editável quando em modo edição) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nome"
+                    android:textColorHint="#120a8f">
+
+                    <EditText
+                        android:id="@+id/editNome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="textPersonName"
+                        android:textColor="#120a8f"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Telefone -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Telefone"
+                    android:textColorHint="#120a8f">
+
+                    <EditText
+                        android:id="@+id/editTelefone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="phone"
+                        android:textColor="#120a8f"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Email -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="E-mail"
+                    android:textColorHint="#120a8f">
+
+                    <EditText
+                        android:id="@+id/editEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="textEmailAddress"
+                        android:textColor="#120a8f"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- LinkedIn -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="LinkedIn"
+                    android:textColorHint="#120a8f">
+
+                    <EditText
+                        android:id="@+id/editLinkedin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="textUri"
+                        android:textColor="#120a8f"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Linha de Botões -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <!-- Botão Ligar -->
+                    <ImageButton
+                        android:id="@+id/btnLigar"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Ligar"
+                        android:src="@drawable/phone_icon_size_24" />
+
+                    <!-- Botão Email -->
+                    <ImageButton
+                        android:id="@+id/btnEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="E-mail"
+                        android:src="@drawable/email_icon_size_24" />
+
+                    <!-- Botão LinkedIn -->
+                    <ImageButton
+                        android:id="@+id/btnLinkedin"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="LinkedIn"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/linkedin_logo_icon" />
+
+                    <!-- Botão Favoritar -->
+                    <ImageButton
+                        android:id="@+id/btnFavorito"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Favoritar"
+                        android:src="@drawable/favorite_border_24" />
+                </LinearLayout>
+
+                <!-- Botão Editar/Salvar -->
+                <Button
+                    android:id="@+id/btnEditar"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Editar"
+                    android:backgroundTint="#E3F2FD"
+                    android:textColor="#120a8f"/>
+
+                <!-- Botão Voltar -->
+                <Button
+                    android:id="@+id/btnVoltar"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Voltar"
+                    android:backgroundTint="#E3F2FD"
+                    android:textColor="#120a8f"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

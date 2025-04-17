@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:layout_margin="8dp">
+
+    <!-- Card Principal -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Nome (Editável quando em modo edição) -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome">
+
+                <EditText
+                    android:id="@+id/editNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:enabled="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Telefone -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Telefone">
+
+                <EditText
+                    android:id="@+id/editTelefone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:enabled="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Email -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="E-mail">
+
+                <EditText
+                    android:id="@+id/editEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:enabled="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- LinkedIn -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="LinkedIn">
+
+                <EditText
+                    android:id="@+id/editLinkedin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textUri"
+                    android:enabled="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Linha de Botões -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:weightSum="4">
+
+                <!-- Botão Ligar -->
+                <ImageButton
+                    android:id="@+id/btnLigar"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/phone_icon_size_24"
+                    android:contentDescription="Ligar"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+
+                <!-- Botão Email -->
+                <ImageButton
+                    android:id="@+id/btnEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/email_icon_size_24"
+                    android:contentDescription="E-mail"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+
+                <!-- Botão LinkedIn -->
+                <ImageButton
+                    android:id="@+id/btnLinkedin"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/linkedin_logo_icon"
+                    android:contentDescription="LinkedIn"
+                    android:scaleType="centerInside"
+                    android:padding="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+
+                <!-- Botão Favoritar -->
+                <ImageButton
+                    android:id="@+id/btnFavorito"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/favorite_border_24"
+                    android:contentDescription="Favoritar"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+            </LinearLayout>
+
+            <!-- Botão Editar/Salvar -->
+            <Button
+                android:id="@+id/btnEditar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Editar"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.cardview.widget.CardView>

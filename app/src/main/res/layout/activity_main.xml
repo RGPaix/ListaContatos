@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#fff9d5"
+    android:padding="20dp">
+
+    <!-- Título da aplicação -->
+    <ImageView
+        android:id="@+id/TextTitle"
+        android:layout_width="250dp"
+        android:layout_height="90dp"
+        android:src="@drawable/titulo_uma_linha"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter" />
+
+    <!-- Linear layout da inserção de dados -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="15dp">
+
+        <!-- Adiconar nome -->
+        <EditText
+            android:id="@+id/EditNome"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_weight="4"
+            android:hint="Adicione um nome:"
+            android:textColorHint="#120a8f"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:padding="10dp">
+        </EditText>
+
+        <!-- Adiconar telefone -->
+        <EditText
+            android:id="@+id/EditTelefone"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:inputType="phone"
+            android:digits="0123456789()- "
+            android:maxLength="15"
+            android:layout_weight="4"
+            android:hint="Adicione um telefone:"
+            android:textColorHint="#120a8f"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:padding="10dp">
+        </EditText>
+
+        <!-- Adiconar e-mail -->
+        <EditText
+            android:id="@+id/EditEmail"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_weight="4"
+            android:inputType="textEmailAddress"
+            android:hint="Adicione um e-mail:"
+            android:textColorHint="#120a8f"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:padding="10dp">
+        </EditText>
+
+        <!-- Adiconar linkedin -->
+        <EditText
+            android:id="@+id/EditLinkedin"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_weight="4"
+            android:hint="Adicione um link do Linkedin:"
+            android:textColorHint="#120a8f"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginBottom="16dp">
+        </EditText>
+
+        <!-- Botão "Adiconar contato" -->
+        <Button
+            android:id="@+id/BttnAdicionar"
+            android:layout_width="302dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=" Adicionar contato "
+            android:textSize="18dp">
+        </Button>
+    </LinearLayout>
+
+    <!-- Constraint layout para lista de contatos -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Lista de contatos -->
+        <ListView
+            android:id="@+id/ListaContatos"
+            android:layout_width="350dp"
+            android:layout_height="300dp"
+            android:background="#E3F2FD"
+            android:gravity="center"
+            android:scaleType="fitCenter"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#E3F2FD">
+
+    <!-- TextView para o Nome (texto maior) -->
+    <TextView
+        android:id="@+id/textNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:padding="8dp"/>
+
+    <!-- TextView para os Detalhes (texto um pouco menor) -->
+    <TextView
+        android:id="@+id/textTelefone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#555555"
+        android:gravity="center"
+        android:drawableStart="@android:drawable/ic_menu_call"
+        android:padding="4dp"/>
+
+    <!-- ImageView para a estrela de favorito) -->
+    <ImageView
+        android:id="@+id/imgFavorito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/btn_star_big_on"
+        android:visibility="gone" />
+
+</LinearLayout>
