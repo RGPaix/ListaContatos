@@ -167,7 +167,7 @@ public class DetalhesActivity extends AppCompatActivity {
         });
     }
 
-    //Metodo para definir cada modo do botão Salvar/Voltar
+    //Metodo para definir cada modo do botão Editar/Salvar
     private void entrarModoEdicao() {
         isEditMode = true;
         btnEditar.setText("Salvar");
